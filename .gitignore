@@ -1,0 +1,8 @@
+node_modules/*
+**.log
+dist/*
+package-lock.json
+yarn.lock
+**/ignore/*
+**/*/.DS_Store
+public/*
