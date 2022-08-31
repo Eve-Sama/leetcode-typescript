@@ -15,6 +15,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "removeComments": true,
+    "inlineSourceMap": true,
   },
   "ts-node": {
     "compilerOptions": {

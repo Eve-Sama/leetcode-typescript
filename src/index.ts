@@ -1,2 +1,2 @@
-import test from './15';
+import test from './946';
 test()
