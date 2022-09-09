@@ -16,6 +16,9 @@
     "emitDecoratorMetadata": true,
     "removeComments": true,
     "inlineSourceMap": true,
+    "paths": {
+      "@utils/*": ["./src/utils/*"],
+    }
   },
   "ts-node": {
     "compilerOptions": {
