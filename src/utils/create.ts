@@ -1,10 +1,11 @@
 import { ListNode } from './interface';
 
 export function createListNode(arr: number[]): ListNode {
-  let listNode: ListNode = null;
+  let oldListNode: ListNode = null;
   for (let index = arr.length - 1; index > -1; index--) {
-    const element = arr[index];
-    listNode = new ListNode(element, listNode);
+    const val = arr[index];
+    const newListNode = new ListNode(val, oldListNode);
+    oldListNode = newListNode;
   }
-  return listNode;
+  return oldListNode;
 }
