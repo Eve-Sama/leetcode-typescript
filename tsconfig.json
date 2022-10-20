@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/",
-    "rootDir": "./src/",
+    "rootDir": ".",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "public",
@@ -19,7 +18,7 @@
     "removeComments": true,
     "inlineSourceMap": true,
     "paths": {
-      "@utils/*": ["utils/*"],
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "ts-node": {

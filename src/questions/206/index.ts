@@ -1,5 +1,5 @@
-import { ListNode } from '../../utils/interface';
-import { createListNode } from '../../utils/create';
+import { ListNode } from '@utils/interface';
+import { createListNode } from '@utils//create';
 
 function reverseList(head: ListNode | null): ListNode | null {
   if (!head) {

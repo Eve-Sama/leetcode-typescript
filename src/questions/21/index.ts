@@ -1,5 +1,5 @@
 import { ListNode } from '@utils/interface';
-import { createListNode } from '../../utils/create';
+import { createListNode } from '@utils//create';
 
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   let l1 = list1;
