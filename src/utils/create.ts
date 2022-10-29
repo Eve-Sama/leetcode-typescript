@@ -16,12 +16,12 @@ export function createTree(arr: number[]): TreeNode {
     return;
   }
   const root = new TreeNode(arr[0]);
+  const stack: Array<{ tree: TreeNode; setLeft: boolean; setRight: boolean }> = [{ tree: root, setLeft: false, setRight: false }];
   let point = 0;
-  let currentTree = root;
-  const stack: Array<{ tree: TreeNode; setLeft: boolean; setRight: boolean }> = [{ tree: currentTree, setLeft: false, setRight: false }];
+  let currentTarget = stack[0];
+  let currentTree = currentTarget.tree;
   while (point++ < arr.length - 1) {
     const value = arr[point];
-    const item = stack[0];
     const isLeft = point % 2 !== 0;
     if (value !== null) {
       const newTree = new TreeNode(value);
@@ -33,14 +33,15 @@ export function createTree(arr: number[]): TreeNode {
       stack.push({ tree: newTree, setLeft: false, setRight: false });
     }
     if (isLeft) {
-      item.setLeft = true;
+      currentTarget.setLeft = true;
     } else {
-      item.setRight = true;
+      currentTarget.setRight = true;
     }
     // #region 检查 stack 中的第一个树是否已经设置过左右结点, 如果是的话将其移除, 设置第二个元素为当前树
-    if (item.setLeft && item.setRight) {
+    if (currentTarget.setLeft && currentTarget.setRight) {
       stack.shift();
-      currentTree = stack[0].tree;
+      currentTarget = stack[0];
+      currentTree = currentTarget.tree;
     }
     // #endregion
   }
