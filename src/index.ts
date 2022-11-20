@@ -1,2 +1,2 @@
-import test from './questions/6242';
+import test from './questions/1710';
 test();
