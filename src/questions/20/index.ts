@@ -1,9 +1,4 @@
 function isValid(s: string): boolean {
-  const map = new Map<string, string>([
-    ['(', ')'],
-    ['{', '}'],
-    ['[', ']'],
-  ]);
   const array = s.split('');
   const stack: string[] = [];
   array.forEach(cur => {
