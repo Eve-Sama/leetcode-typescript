@@ -1,2 +1,2 @@
-import test from './questions/165. 比较版本号';
+import test from './questions/206. 反转链表';
 test();

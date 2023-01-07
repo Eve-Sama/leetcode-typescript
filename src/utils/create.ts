@@ -1,5 +1,6 @@
 import { ListNode, TreeNode } from './interface';
 
+/** 根据给定的数组, 生成链表 */
 export function createListNode(arr: number[]): ListNode {
   let oldListNode: ListNode = null;
   for (let index = arr.length - 1; index > -1; index--) {
